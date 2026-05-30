@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pet Orkut - Perfil</title>
+        <link rel="stylesheet" href="css/sytle.css">
+        <style>
+            dialog::backdrop{
+                background: rgba(0, 0, 0, 0.5);
+            }
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <section id="profile-card">
+                <img id="petAvatar" src="" alt="Foto do Pet" width="200" style="display: none;">
+
+                <h1 id="petName">Carregando nome...</h1>
+                <p><strong>Sobre mim:</strong> <span id="petBio">Carregando bio...</span></p>
+
+                <div class="actions">
+                    <button id="btnEditProfile">Editar Perfil</button>
+                    <button id="btnDeleteProfile">Excluir Conta</button>
+                    <button id="btnLogout">Sair da Conta</button>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <a href="scrapbook.html" id="linkScrapbook">Ver Mural de Recados</a>
+                </div>
+            </section>
+
+            <dialog id="editProfileModal">
+                <h2>Editar Perfil</h2>
+                <form id="editProfleForm">
+                    <div>
+                        <label for="editPetName">Nome:</label>
+                        <input type="text" id="editPetName" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="editPetBio">Sobre mim:</label>
+                        <textarea id="editPetBio" required></textarea>
+                    </div>
+                    <br>
+                    <div class="modal-actions">
+                        <button type="submit">Salvar Alterações</button>
+                        <button type="button" id="tbnCancelEdit">Cancelar</button>
+                    </div>
+                </form>
+            </dialog>
+        </main>
+
+        <script src="JS/api.js"></script>
+        <script src="JS/profile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Orkut - Scrapbook</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .message-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+        .message-card .timestamp {
+            font-size: 0.8em;
+            color: gray;
+        }
+        .edit-mode .display-text { display: none; }
+        .edit-mode .edit-input { display: block; width: 100%; margin-bottom: 10px; }
+        
+        .normal-mode .display-text { display: block; }
+        .normal-mode .edit-input { display: none; }
+    </style>
+</head>
+<body>
+
+    <main>
+        <nav>
+            <a href="profile.html" id="linkBackToProfile">⬅ Voltar ao Perfil</a>
+        </nav>
+
+        <h1>Mural de Recados (Scrapbook) 🦴</h1>
+
+        <!-- Formulário de Criação -->
+        <section id="newMessageSection">
+            <form id="scrapbookForm">
+                <label for="messageContent">Deixe um recado:</label><br>
+                <textarea id="messageContent" rows="3" style="width: 100%;" required placeholder="Ex: Au au! Bora passear no parque?"></textarea>
+                <br>
+                <button type="submit">Enviar Recado</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- Container onde as mensagens serão renderizadas -->
+        <section>
+            <h2>Recados Recentes</h2>
+            <div id="messagesContainer">
+                <p>Carregando recados...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/scrapbook.js"></script>
+</body>
+</html>

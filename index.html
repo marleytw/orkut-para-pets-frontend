@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tittle>Pet Orkut - Cadastro</tittle>
+    <link rel="stylesheet" href="css/sytle.css">
+</head>
+<body>
+
+    <main>
+        <h1>Crie o perfil do seu Pet!🐾</h1>
+        <form id="petRegisterForm">
+            <div>
+                <label for="petName">Nome do Pet:</label>
+                <input type="text" id="petName" name="petName" required>
+            </div>
+
+            <div>
+                <label for="petBio">Sobre mim (Bio):</label>
+                <textarea id="petBio" name="petBio" required></textarea>
+            </div>
+
+            <button type="submit">Gerar Avatar e Cadastrar</button>
+        </form>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>
