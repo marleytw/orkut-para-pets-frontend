@@ -5,24 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <tittle>Pet Orkut - Cadastro</tittle>
     <link rel="stylesheet" href="css/sytle.css">
+    <style>
+        .auth-container {display: flex; gap: 40px; flex-wrap: wrap;}
+        .auth-box { flex: 1; min-width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;}
+        .auth-box h2 { margin-top: 0;}
+        .form-group {margin-bottom: 15px;}
+        .form-group label {display: block; margin-bottom: 5px;}
+        .form-group input, .form-group textarea {width: 100%; padding: 8px; box-sizing: border-box;}
+    </style>
 </head>
 <body>
 
     <main>
-        <h1>Crie o perfil do seu Pet!🐾</h1>
-        <form id="petRegisterForm">
-            <div>
-                <label for="petName">Nome do Pet:</label>
-                <input type="text" id="petName" name="petName" required>
-            </div>
+        <h1>Bem-vindo ao Pet Orkut! 🐾</h1>
+        
+        <div class="auth-container">
+            <section class="auth-box">
+                <h2>Já tenho conta (Login)</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail:</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Senha:</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+            </section>
 
-            <div>
-                <label for="petBio">Sobre mim (Bio):</label>
-                <textarea id="petBio" name="petBio" required></textarea>
-            </div>
-
-            <button type="submit">Gerar Avatar e Cadastrar</button>
-        </form>
+            <section class="auth-box">
+                <h2>Sou novo aqui (Cadastro)</h2>
+                <form id="petRegisterForm">
+                    <div class="form-group">
+                        <label for="petName">Nome do Pet:</label>
+                        <input type="text" id="petName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petEmail">E-mail:</label>
+                        <input type="email" id="petEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petPassword">Senha (mín. 6 caracteres):</label>
+                        <input type="password" id="petPassword" minlength="6" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="petBio">Sobre mim (Bio):</label>
+                        <textarea id="petBio" required></textarea>
+                    </div>
+                    <button type="submit">Gerar Avatar e Cadastrar</button>
+                </form>
+            </section>
+        </div>
     </main>
 
     <script src="js/api.js"></script>

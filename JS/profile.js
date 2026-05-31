@@ -28,7 +28,7 @@ async function loadProfile() {
         petNameEl.textContent = petData.name;
         petBioEl.textContent = petData.bio;
 
-        petAvatarEl.src = petData.avatarUrl;
+        petAvatarEl.src = petData.avatar_url;
         petAvatarEl.style.display = 'block';
 
         linkScrapbook.href = `scrapbook.html?petId=${currentPetId}`;
@@ -49,7 +49,7 @@ document.getElementById('btnEditProfile').addEventListener('click', () => {
 });
 
 document.getElementById('btnCancelEdit').addEventListener('click', () => {
-    editModal.closest();
+    editModal.close();
 });
 
 editForm.addEventListener('submit', async (event) => {
@@ -84,6 +84,7 @@ document.getElementById('btnDeleteProfile').addEventListener('click', async () =
             alert("Conta excluida com sucesso. Voltado para tela inicial...");
 
             localStorage.removeItem('loggedPetId');
+            localStorage.removeItem('authToken');
             window.location.href = 'index.html';
         } catch (error){
             console.error('Erro ao excluir conta:',error);
