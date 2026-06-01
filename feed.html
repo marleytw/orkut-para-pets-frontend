@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Orkut - Feed Global</title>
+    <link rel="stylesheet" href="./CSS/sytle.css">
+    <style>
+        .feed-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .feed-header {
+            font-size: 0.85em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .feed-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <nav class="feed-nav">
+            <h2>Feed da Comunidade 🌍</h2>
+            <div>
+                <a href="#" id="linkMyProfile" class="nav-btn">Meu Perfil</a>
+                <a href="#" id="btnLogoutFeed" class="nav-btn">Sair</a>
+            </div>
+        </nav>
+
+        <section id="globalMessagesContainer">
+            <p>Buscando os latidos mais recentes...</p>
+        </section>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/feed.js"></script>
+</body>
+</html>

@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
         localStorage.setItem('authToken', response.token);
         localStorage.setItem('loggedPetId', response.pet.id);
 
-        window.location.href = 'profile.html';
+        window.location.href = 'feed.html';
     } catch (error){
         console.error('Erro no login:', error);
         alert(error.error || 'Erro ao fazer login. Verifique suas credenciais');
@@ -61,5 +61,5 @@ document.getElementById('petRegisterForm').addEventListener('submit', async (eve
 });
 
 if(localStorage.getItem('authToken')){
-    window.location.href = 'profile.html';
+    window.location.href = 'feed.html';
 }

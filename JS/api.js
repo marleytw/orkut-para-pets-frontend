@@ -71,9 +71,12 @@ const api = {
         },
         getAll: async (petId = null) => {
             const url = petId ? `${BASE_URL}/messages?petId=${petId}` : `${BASE_URL}/messages`;
-            const response = await fetch(url);
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: getHeaders()
+            });
             if (!response.ok) throw await response.json();
-            return response.json;
+            return response.json();
         },
         update: async (id, content) => {
             const response = await fetch(`${BASE_URL}/messages/${id}`, {

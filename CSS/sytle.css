@@ -1,0 +1,331 @@
+/* =======================================================
+   ESTILO GLOBAL (A Nostalgia do Orkut)
+   ======================================================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d4dded; /* Aquele fundo azulzinho clássico */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container centralizado estilo "página dos anos 2000" */
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos com o rosa característico do logo do Orkut */
+h1, h2, h3 {
+    color: #d1207e; 
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 24px;
+    border-bottom: 2px solid #e8eefa;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Links clássicos azuis */
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #d1207e;
+}
+
+/* Barras de Navegação Superiores */
+nav {
+    background-color: #e8eefa;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #c3d1ec;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.feed-nav {
+    justify-content: space-between;
+}
+
+.feed-nav h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #597da3;
+}
+
+/* BOTÕES DE NAVEGAÇÃO (Feed e Scrapbook) */
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8baeea;
+    color: #ffffff !important;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #597da3;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    transition: background-color 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #597da3;
+    text-decoration: none; 
+}
+
+/* =======================================================
+   FORMULÁRIOS E BOTÕES
+   ======================================================= */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #99c;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #d1207e;
+    box-shadow: 0 0 5px rgba(209, 32, 126, 0.3);
+}
+
+button {
+    background-color: #e8eefa;
+    border: 1px solid #99c;
+    color: #0056b3;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #d4dded;
+    color: #333;
+}
+
+/* =======================================================
+   TELA DE LOGIN E CADASTRO
+   ======================================================= */
+.auth-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.auth-box {
+    flex: 1;
+    min-width: 280px;
+    background-color: #f0f4fa; /* Azul beeeem clarinho */
+    border: 1px solid #c3d1ec;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.auth-box h2 {
+    font-size: 18px;
+    color: #597da3;
+    border-bottom: 1px solid #c3d1ec;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #597da3;
+    font-size: 14px;
+}
+
+/* =======================================================
+   TELA DE PERFIL
+   ======================================================= */
+#profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f4fa;
+    border: 1px solid #c3d1ec;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#petAvatar {
+    border: 4px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    max-width: 200px;
+}
+
+#profile-card .actions {
+    margin-top: 15px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* =======================================================
+   FORMULÁRIO DE NOVO RECADO (Destaque Orkut)
+   ======================================================= */
+#newMessageSection {
+    background-color: #e4f2fd; /* Azul clássico de destaque */
+    border: 1px solid #8baeea;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+}
+
+#newMessageSection label {
+    color: #d1207e; /* Rosa Orkut */
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#newMessageSection button {
+    background-color: #8baeea;
+    color: #fff;
+    border: 1px solid #597da3;
+    margin-top: 10px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+#newMessageSection button:hover {
+    background-color: #597da3;
+}
+
+/* =======================================================
+   SCRAPBOOK E FEED GLOBAL (Os Recados)
+   ======================================================= */
+.message-card, .feed-card {
+    background-color: #ffffff;
+    border: 1px solid #c3d1ec;
+    border-left: 5px solid #8baeea; /* Borda grossa lateral clássica */
+    padding: 0; 
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden; 
+}
+
+/* Efeito zebra turbinado com a borda lateral mudando de cor */
+.message-card:nth-child(even), .feed-card:nth-child(even) {
+    background-color: #f8fbff;
+    border-left: 5px solid #d1207e;
+}
+
+/* O Cabeçalho de cada recado */
+.timestamp, .feed-header {
+    background-color: #e8eefa;
+    font-size: 0.85em;
+    color: #597da3;
+    padding: 10px 15px;
+    border-bottom: 1px solid #c3d1ec;
+    margin-bottom: 0; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+/* O texto do recado */
+.display-text, .edit-input {
+    padding: 15px;
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+    font-size: 14px;
+}
+
+/* =======================================================
+   BOTÕES DE AÇÃO DOS RECADOS (Estilo links clássicos)
+   ======================================================= */
+.message-card .actions {
+    padding: 10px 15px;
+    background-color: #fcfcfc;
+    border-top: 1px dashed #ccc;
+    display: flex;
+    gap: 8px;
+}
+
+.message-card .actions button {
+    background-color: transparent;
+    border: 1px solid #99c;
+    color: #0056b3;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: normal;
+    box-shadow: none;
+}
+
+.message-card .actions button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* =======================================================
+   LÓGICA DE EDIÇÃO E MODAL
+   ======================================================= */
+.edit-mode .display-text { display: none; }
+.edit-mode .edit-input { 
+    display: block; 
+    width: 95%; 
+    margin: 15px auto; 
+    border: 1px solid #d1207e;
+}
+.normal-mode .display-text { display: block; }
+.normal-mode .edit-input { display: none; }
+
+dialog {
+    border: 1px solid #c3d1ec;
+    border-radius: 8px;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}

@@ -14,6 +14,10 @@
 
     <body>
         <main>
+            <nav style="margin-bottom: 20px;">
+                <a href="feed.html"><- Voltar ao Feed Global</a>
+            </nav>
+            
             <section id="profile-card">
                 <img id="petAvatar" src="" alt="Foto do Pet" width="200" style="display: none;">
 
@@ -33,7 +37,7 @@
 
             <dialog id="editProfileModal">
                 <h2>Editar Perfil</h2>
-                <form id="editProfleForm">
+                <form id="editProfileForm">
                     <div>
                         <label for="editPetName">Nome:</label>
                         <input type="text" id="editPetName" required>
@@ -46,7 +50,7 @@
                     <br>
                     <div class="modal-actions">
                         <button type="submit">Salvar Alterações</button>
-                        <button type="button" id="tbnCancelEdit">Cancelar</button>
+                        <button type="button" id="btnCancelEdit">Cancelar</button>
                     </div>
                 </form>
             </dialog>
